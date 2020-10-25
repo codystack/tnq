@@ -1,2 +1,2 @@
-# foi
-Face of Idoma International Pageant Website
+# tnq
+Nigerian Queen Pageant Official Website

@@ -14,7 +14,7 @@ include ('./components/header.php');
         </div>
         <div class="row justify-content-center py-6 text-light mb-5">
             <div class="col text-center">
-                <h1 class="display-3">Coming Soon</h1>
+                <h1 class="display-3">Starting Soon</h1>
                 <div class="lead">Registration kicks off on December 1<sup>st</sup> 2020.</div>
             </div>
         </div>

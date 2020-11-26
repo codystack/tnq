@@ -11,22 +11,22 @@
             <div class="collapse navbar-collapse">
             <div class="py-2 py-lg-0">
               <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item <?php if($page=='about'){echo 'active';}?>">
                     <a href="about" class="nav-link">About</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php if($page=='contestants'){echo 'active';}?>">
                     <a href="contestants" class="nav-link">Contestants</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php if($page=='gallery'){echo 'active';}?>">
                     <a href="gallery" class="nav-link">Gallery</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php if($page=='wall-of-fame'){echo 'active';}?>">
                     <a href="wall-of-fame" class="nav-link">Wall of Fame</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://blog.nigerianqueen.org" target="_blank" class="nav-link">Blog</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item <?php if($page=='contact'){echo 'active';}?>">
                     <a href="contact" class="nav-link">Contact</a>
                 </li>
               </ul>

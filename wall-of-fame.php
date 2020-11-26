@@ -1,4 +1,5 @@
 <?php
+$page = 'wall-of-fame';
 include ('./components/header.php');
 ?>
 

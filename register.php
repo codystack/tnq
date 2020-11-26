@@ -15,50 +15,7 @@ include ('./components/header.php');
         <div class="row justify-content-center py-6 text-light mb-5">
             <div class="col text-center">
                 <h1 class="display-3">Coming Soon</h1>
-                <div class="lead">Hold tight, we're still preparing nice for you. Stay tuned.</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 add-countdown-time" data-countdown-date="2020/12/10" data-detailed>
-                <div data-active class="row text-center">
-                    <div class="col-md">
-                        <div class="card card-body" data-aos="fade-up" data-aos-delay="100">
-                            <span class="h1 text-primary mb-2" data-weeks data-format="%w"></span>
-                            <span class="h6 mb-0" data-weeks-label></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md">
-                        <div class="card card-body" data-aos="fade-up" data-aos-delay="200">
-                            <span class="h1 text-primary mb-2" data-days data-format="%d"></span>
-                            <span class="h6 mb-0" data-days-label></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md">
-                        <div class="card card-body" data-aos="fade-up" data-aos-delay="300">
-                            <span class="h1 text-primary mb-2" data-hours></span>
-                            <span class="h6 mb-0" data-hours-label></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md">
-                        <div class="card card-body" data-aos="fade-up" data-aos-delay="400">
-                            <span class="h1 text-primary mb-2" data-minutes></span>
-                            <span class="h6 mb-0" data-minutes-label></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md">
-                        <div class="card card-body" data-aos="fade-up" data-aos-delay="500">
-                            <span class="h1 text-primary mb-2" data-seconds></span>
-                            <span class="h6 mb-0" data-seconds-label></span>
-                        </div>
-                    </div>
-                </div>
-                <div data-elapsed style="display: none;">
-                    <h4>This is the fallback for when the countdown is elapsed</h4>
-                </div>
+                <div class="lead">Registration kicks off on December 1<sup>st</sup> 2020.</div>
             </div>
         </div>
     </div>

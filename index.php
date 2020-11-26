@@ -70,6 +70,16 @@ include ('./components/navbar.php');
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iezCyjuLOc0?rel=0&autoplay=1" allowfullscreen></iframe>
           </div>
         </div>
+        <div class="col-md-12 col-lg-6 col-xl-6 mb-3" data-aos="fade-up">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UeEbUC5lKX8?rel=0&autoplay=1" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-6 col-xl-6 mb-3" data-aos="fade-up">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K4pmw6ra9ig?rel=0&autoplay=1" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
       <div class="row">
         <div class="col">

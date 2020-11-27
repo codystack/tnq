@@ -87,7 +87,7 @@ include ('./components/navbar.php');
         </div>
       </div>
     </section>
-
+<!--
     <section class="bg-primary-3 text-light has-divider">
       <div class="container">
         <div class="row mb-4">
@@ -126,7 +126,7 @@ include ('./components/navbar.php');
         <img src="assets/img/dividers/divider-3.svg" alt="graphical divider" data-inject-svg />
       </div>
     </section>
-
+-->
     <section>
       <div class="container">
         <div class="row mb-4 justify-content-center text-center">

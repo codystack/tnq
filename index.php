@@ -5,14 +5,14 @@ include ('./components/navbar.php');
 ?>
 
     <section class="bg-primary-2 text-light p-0 o-hidden">
-      <img src="assets/img/ticketonlinebg3.jpg" alt="Image" class="bg-image">
+      <img src="assets/img/ticketonlinebg2.jpg" alt="Image" class="bg-image">
       <div class="container layer-2">
-        <div class="row py-6 min-vh-80 align-items-center" data-aos="fade-up" style="text-align-last: center;">
+        <div class="row py-6 min-vh-80" data-aos="fade-up">
           <div class="col-lg-12 col-xl-12 mt-7">
-            <h5>November 27<sup>th</sup> 2020</h5>
-            <h1 class="display-1">TNQ2020</h1>
-            <p class="lead mb-4">Witness the Biggest Night of Beauty Live and Safe.</p>
-            <a href="#" class="btn btn-primary btn-lg">Buy Ticket</a>
+            <h5>Nigerian Queen</h5>
+            <h1 class="display-1">WINNER</h1>
+            <p class="lead mb-4">Chikaodili Nna-Udosen</p>
+            <a href="register" class="btn btn-primary btn-lg">Register Now</a>
           </div>
         </div>
       </div>

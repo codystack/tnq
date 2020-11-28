@@ -22,7 +22,7 @@ include ('./components/navbar.php');
       <div class="container" data-aos="fade-up">
         <div class="row align-items-center justify-content-around">
           <div class="col-md-5 col-xl-6 mb-4 mb-md-0">
-            <img src="https://imgur.com/Uv70uss.jpg" alt="Image" class="rounded shadow-3d">
+            <img src="https://imgur.com/TOuD7I7.jpg" alt="Image" class="rounded shadow-3d">
           </div>
           <div class="col-md-7 col-xl-6">
             <div class="row justify-content-center">

@@ -22,17 +22,8 @@
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <script src="./assets/js/custom.js"></script>
-  <!-- Form Toggle Switch Start -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-        $("#regform").click(function(){
-            $("#registeredToggle, #registeredToggle1").toggle(500);
-            $("#buttonToggle").text($("#buttonToggle").text() == 'Activate Account' ? 'Create ccount' : 'Activate Account');
-        });
-    });
-  </script>
-  <!-- Form Toggle Switch End -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="assets/js/pay.js"></script>
   <script type="text/javascript">
     window.onload = function () {
         var txtPassword = document.getElementById("txtPassword");
@@ -47,6 +38,7 @@
         }
     }
   </script>
+
 </body>
 
 </html>

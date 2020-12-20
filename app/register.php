@@ -1,8 +1,6 @@
 <?php
 include('./components/header.php');
-include('./controllers/auth-controller.php');
 session_start();
-
 ?>
 
   <!-- Main content -->
@@ -34,12 +32,9 @@ session_start();
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-8">
           <div class="card bg-secondary border-0">
-          <div class="card-header bg-transparent pb-5">
-              <div class="text-muted text-center mt-2 mb-4"><small>Contestants Registration Form</small></div>
-          </div>
             <div class="card-body px-lg-5 py-lg-5">
-              <form role="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-              <div class="already-registered">
+              <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="paymentForm">
+              <div class="text-muted text-right mt-2 mb-4" value="10000" id="amount"><small><strong>REGISTRATION FEE ₦10,000</strong></small></div>
                 <div class="form-group">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
@@ -56,7 +51,6 @@ session_start();
                     <input class="form-control" placeholder="Last Name" pattern="[a-zA-Z]+" required type="text" name="lname">
                   </div>
                 </div>
-              </div>
                 <div class="form-group">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
@@ -78,7 +72,7 @@ session_start();
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                     </div>
-                    <input class="form-control" id="txtPassword" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    <input class="form-control" id="txtPassword" placeholder="Password"
   title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required type="password" name="password">
                   </div>
                 </div>
@@ -90,7 +84,7 @@ session_start();
                     <input class="form-control" id="txtConfirmPassword" required placeholder="Confirm Password" type="password" name="confirm_password">
                   </div>
                 </div>
-              <div class="already-registered">
+                
                 <hr>
                 <div class="form-group">
                     <div class="input-group">
@@ -113,7 +107,7 @@ session_start();
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                     </div>
-                    <input class="form-control" type="date" required value="2020-06-13" date of birth id="dob" name="dob">
+                    <input class="form-control" type="date" required date of birth id="dob" name="dob">
                   </div>
                 </div>
                 <div class="form-group">
@@ -190,9 +184,8 @@ session_start();
                     </div>
                   </div>
                 </div>
-              </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary mt-4" name="register">Create account</button>
+                  <button class="btn btn-primary mt-4" onclick="payWithPaystack()">Create account</button>
                 </div>
               </form>
             </hr>

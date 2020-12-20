@@ -1,54 +1,181 @@
-<!--<meta http-equiv="refresh" content="0; url = app/register" />--> 
-<?php
-include ('./components/header.php');
-?>
+<!doctype html>
+<html lang="en">
 
-<section class="min-vh-100 bg-primary-3 py-5 o-hidden">
-    <div class="container position-relative layer-2">
-        <div class="row justify-content-center mb-md-6">
-            <div class="col-auto">
-                <a href="\">
-                    <img src="https://i.imgur.com/XSGaWUp.png" alt="TNQ" style="width: 200px;">
-                </a>
-            </div>
-        </div>
-        <div class="row justify-content-center py-6 text-light mb-5">
-            <div class="col text-center">
-                <h1 class="display-3">Starting Soon</h1>
-                <div class="lead">Registration kicks off on December 1<sup>st</sup> 2020.</div>
-            </div>
-        </div>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+
+    <meta charset="utf-8">
+    <title>Register :: Nigerian Queen™</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://voteonline.com.ng/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nigerian Queen™ :: Beauty for Purpose">
+    <meta property="og:description" content="The Nigerian Queen beauty pageant mission is to find and promote exceptional young ladies with value and virtues that can positively affect her generation, environment and also having strong interest in humanitarian services">
+    <meta name="keywords" content="ThankGodOkoro.codes,ThankGod Okoro,Vote Online,Nigerian Queen,TNQ,beauty pageant,software,voting,election,online contest,contest,award shows,award,shows,pageantry,digital voting,event ticket management,event voting,fashion award,headies awards,amvca,Africa Magic Viewers' Choice Awards,branding">
+    <meta property="og:image" content="https://i.imgur.com/XSGaWUp.png">
+    <meta name="author" content="ThankGod Okoro is a Software developer/programmer, Web + App Developer, UI/UX Designer, Brand Strategist &amp; Product/Graphic Designer.">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://i.imgur.com/TNznbKa.png" />
+    <style>
+      @keyframes hideLoader{0%{ width: 100%; height: 100%; }100%{ width: 0; height: 0; }  }  body > div.loader{ position: fixed; background: white; width: 100%; height: 100%; z-index: 1071; opacity: 0; transition: opacity .5s ease; overflow: hidden; pointer-events: none; display: flex; align-items: center; justify-content: center;}body:not(.loaded) > div.loader{ opacity: 1;}body:not(.loaded){ overflow: hidden;}  body.loaded > div.loader{animation: hideLoader .5s linear .5s forwards;  } /* Typing Animation */.loading-animation {width: 6px;height: 6px;border-radius: 50%;animation: typing 1s linear infinite alternate;position: relative;left: -12px;}@keyframes typing {0% {background-color: rgba(100,100,100, 1);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 0.2),24px 0px 0px 0px rgba(100,100,100, 0.2);}25% {background-color: rgba(100,100,100, 0.4);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 2),24px 0px 0px 0px rgba(100,100,100, 0.2);}75% {background-color: rgba(100,100,100, 0.4);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 0.2),24px 0px 0px 0px rgba(100,100,100, 1);}}
+    </style>
+    <script type="text/javascript">
+      window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
+    </script>
+    <link href="assets/css/theme-event.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2113ffa3185856e2343592157/3e465356717a7cc083cfb2e03.js");</script>
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="loading-animation"></div>
     </div>
-    <div class="decoration-wrapper d-none d-sm-block">
-        <div class="decoration bottom middle-y scale-5">
-            <img class="bg-primary" src="assets/img/decorations/deco-blob-9.svg" alt="deco-blob-9 decoration" data-inject-svg />
-        </div>
-        <div class="decoration bottom right scale-5">
-            <img class="bg-primary-2" src="assets/img/decorations/deco-dots-4.svg" alt="deco-dots-4 decoration" data-inject-svg />
-        </div>
-    </div>
-</section>
 
+    <section class="row no-gutters min-vh-100 p-0">
+      <div class="col-lg-4 bg-primary-3 d-flex justify-content-end">
+        <img src="https://i.imgur.com/UZ1nV5O.jpg" alt="Image" class="bg-image" >
+        <!--<div class="divider divider-vertical d-none d-lg-block" style="height: 100%;">
+          <img src="assets/img/dividers/divider-vertical-1.svg" alt="graphical divider" data-inject-svg />
+        </div>-->
+      </div>
+      <div class="col px-5 position-relative d-flex align-items-center">
+        <div class="row justify-content-center w-100">
+          <div class="col-md-8 col-lg-7 col-xl-6">
+            <div class="text-center mb-4">
+              <h1 class="mb-1">REGISTRATION</h1>
+              <span>Please kindly fill in your details correctly in the form below.</span>
+            </div>
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" id="paymentForm">
+            <small class="text-muted float-right">REGISTRATION FEE ₦10,000</small>  
+            <div class="form-group">
+                <input type="text" name="fname" placeholder="First Name" required class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="text" name="lname" placeholder="Last Name" required class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="email" name="signup-email" placeholder="Email Address" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="tel" name="phone" placeholder="Phone Number" required class="form-control">
+              </div>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" name="ighandle" placeholder="Instagram Handle" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="address" placeholder="Residential Address" required class="form-control">
+              </div>
+              <div class="form-group">
+                <select class="form-control" name="age" required="">
+                <option selected>Age</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                </select>
+            </div>
+            <div class="form-group">
+                  <select class="form-control" required name="sorigin">
+                    <option data-display="State Of Origin">State Of Origin</option>
+                    <option value="Abia">Abia</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Bauchi">Bauchi</option>
+                    <option value="Bayelsa">Bayelsa</option>
+                    <option value="Benue">Benue</option>
+                    <option value="Borno">Borno</option>
+                    <option value="Cross River">Cross River</option>
+                    <option value="Delta">Delta</option>
+                    <option value="Ebonyi">Ebonyi</option>
+                    <option value="Edo">Edo</option>
+                    <option value="Ekiti">Ekiti</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="Abuja">FCT - Abuja</option>
+                    <option value="Gombe">Gombe</option>
+                    <option value="Imo">Imo</option>
+                    <option value="Jigawa">Jigawa</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Kano">Kano</option>
+                    <option value="Katsina">Katsina</option>
+                    <option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option>
+                    <option value="Kwara">Kwara</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Nasarawa">Nasarawa</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Ogun">Ogun</option>
+                    <option value="Ondo">Ondo</option>
+                    <option value="Osun">Osun</option>
+                    <option value="Oyo">Oyo</option>
+                    <option value="Plateau">Plateau</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option>
+                    <option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamfara</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select class="form-control" required name="acity">
+                    <option data-display="Preferred Audition City">Preferred Audition City</option>
+                    <option value="Abuja">Abuja</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Anambra">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Calabar">Calabar</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="Ibadan">Ibadan</option>
+                    <option value="Ilorin">Ilorin</option>
+                    <option value="Jos">Jos</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Owerri">Owerri</option>
+                  </select>                  
+                </div>
+              <div class="form-group">
+                <input type="text" style="display: none;" name="signup-password-confirm" value="10000" id="amount" class="form-control">
+              </div>
+                <div class="form-group">
+                    <label for="picture">Upload photograph</label>
+                    <input type="file" class="form-control-file" id="picture" name="picture" required>
+                </div>
+              <div class="form-group custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" required id="signup-agree">
+                <label class="custom-control-label text-small text-muted" for="signup-agree">I agree to the <a href="terms">Terms &amp; Conditions</a>
+                </label>
+              </div>
+              <div class="form-group">
+                <button class="btn-block btn btn-primary" onclick="payWithPaystack()">Register</button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
-      <img class="icon" src="assets/img/icons/theme/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
-    </a>
     <!-- Required vendor scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/popper.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 
-    <script type="text/javascript">
-      (function($){
-            var now             = new Date;
-            var day             = 864e5;
-            var weeksToAdd      = 2;
-            var tenWeeksFromNow = new Date(+now + day * 7 * weeksToAdd).toISOString().slice(0,10).replace(/\-/g, 'index');
-            $('[data-countdown-date].add-countdown-time').attr('data-countdown-date', tenWeeksFromNow);
-          })(jQuery);
-    </script>
-
-    
     <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
     <script type="text/javascript" src="assets/js/aos.js"></script>
     <!-- Clipboard (copies content from browser into OS clipboard) -->
@@ -89,10 +216,15 @@ include ('./components/header.php');
     <script type="text/javascript" src="assets/js/theme.js"></script>
 
     <script type="text/javascript">
-      jQuery("form:not([action])").on('submit', function(){return false;});
+      // This script appears only in the demo - it disables forms with no action attribute to prevent 
+      // navigating away from the page.
+      jQuery("form:not([action])").on('submit', function(){return true;});
     </script>
 
+<script type="text/javascript" src="assets/js/pay.js"></script>
+
   </body>
+
 
 
 </html>

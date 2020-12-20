@@ -9,9 +9,9 @@ include ('./components/navbar.php');
       <div class="container layer-2">
         <div class="row py-6 min-vh-80" data-aos="fade-up">
           <div class="col-lg-12 col-xl-12 mt-7">
-            <h5>Nigerian Queen</h5>
+            <h5>Nigerian Queen 2020</h5>
             <h1 class="display-1">WINNER</h1>
-            <p class="lead mb-4">Chikaodili Nna-Udosen</p>
+            <p class="lead mb-4">#RoadToTheNigerianQueen</p>
             <a href="register" class="btn btn-primary btn-lg">Register Now</a>
           </div>
         </div>
@@ -131,26 +131,26 @@ include ('./components/navbar.php');
       <div class="container">
         <div class="row mb-4 justify-content-center text-center">
           <div class="col-xl-8 col-lg-9">
-            <h2 class="display-4">Tickets selling fast</h2>
-            <p class="lead">Watch and cheer your favourite contestant LIVE! <br>while keeping safe distance.</p>
+            <h2 class="display-4">Forms are selling fast</h2>
+            <p class="lead">That crown looks perfectly on you, <br>if becoming a queen has always been your desire,<br>then just click the register button below.</p>
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-8 col-xl-7" data-aos="fade-up">
             <div class="card card-lg card-body flex-sm-row align-items-center pricing-ticket bg-primary layer-2 text-light">
               <div class="mx-2 text-center text-sm-left mb-3 mb-sm-0">
-                <span class="h1 d-block">Grand Access</span>
+                <span class="h1 d-block">Be the NEXT Nigeria Queen</span>
                 <p class="lead pr-xl-3">
-                  Witness the Biggest Night of Beauty Live and Safe.
+                  You too might be next Nigerian Queen.
                 </p>
-                <a href="https://ticket.nigerianqueen.org/" target="_blank" class="btn btn-lg mt-2 btn-white">Buy Ticket</a>
+                <a href="https://ticket.nigerianqueen.org/" target="_blank" class="btn btn-lg mt-2 btn-white">Register Now</a>
               </div>
-              <div class="mx-2 text-center">
+              <!--<div class="mx-2 text-center">
                 <div class="d-flex align-items-center">
                   <span class="h3 mb-0">₦</span>
                   <span class="display-3">25k</span>
                 </div>
-              </div>
+              </div>-->
             </div>
             <div class="decoration bottom right scale-2 d-none d-md-block">
               <img class="bg-primary-2" src="assets/img/decorations/deco-blob-13.svg" alt="deco-blob-13 decoration" data-inject-svg />

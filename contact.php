@@ -30,7 +30,7 @@ include ('./components/navbar.php');
                   <img class="icon bg-primary" src="assets/img/icons/theme/map/marker-2.svg" alt="decoration" data-inject-svg />
               </div>
             <span class="lead">
-              Nyenweli O.N Nsirim Layout,
+              39 Nyenweli O.N Nsirim Layout,
                 <br>Off Tombia Extension G.R.A. Phase III,
                 <br>Port Harcourt, Rivers State.
             </span>

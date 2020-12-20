@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -56,7 +59,7 @@
                 <input type="text" name="lname" placeholder="Last Name" required class="form-control">
               </div>
               <div class="form-group">
-                <input type="email" name="signup-email" placeholder="Email Address" class="form-control">
+                <input type="email" name="email" placeholder="Email Address" class="form-control">
               </div>
               <div class="form-group">
                 <input type="tel" name="phone" placeholder="Phone Number" required class="form-control">
@@ -73,7 +76,6 @@
               <div class="form-group">
                 <select class="form-control" name="age" required="">
                 <option selected>Age</option>
-                <option value="17">17</option>
                 <option value="18">18</option>
                 <option value="19">19</option>
                 <option value="20">20</option>
@@ -85,12 +87,10 @@
                 <option value="26">26</option>
                 <option value="27">27</option>
                 <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
                 </select>
             </div>
             <div class="form-group">
-                  <select class="form-control" required name="sorigin">
+                  <select class="form-control" required name="state">
                     <option data-display="State Of Origin">State Of Origin</option>
                     <option value="Abia">Abia</option>
                     <option value="Adamawa">Adamawa</option>
@@ -132,7 +132,7 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <select class="form-control" required name="acity">
+                  <select class="form-control" required name="city">
                     <option data-display="Preferred Audition City">Preferred Audition City</option>
                     <option value="Abuja">Abuja</option>
                     <option value="Adamawa">Adamawa</option>
@@ -150,7 +150,7 @@
                   </select>                  
                 </div>
               <div class="form-group">
-                <input type="text" style="display: none;" name="signup-password-confirm" value="10000" id="amount" class="form-control">
+                <input type="text" style="display: non;" name="signup-password-confirm" value="10000" id="amount" class="form-control">
               </div>
                 <div class="form-group">
                     <label for="picture">Upload photograph</label>
@@ -215,13 +215,14 @@
     <!-- Required theme scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/theme.js"></script>
 
+    <script type="text/javascript" src="assets/js/pay.js"></script>
+
     <script type="text/javascript">
       // This script appears only in the demo - it disables forms with no action attribute to prevent 
       // navigating away from the page.
       jQuery("form:not([action])").on('submit', function(){return true;});
     </script>
 
-<script type="text/javascript" src="assets/js/pay.js"></script>
 
   </body>
 

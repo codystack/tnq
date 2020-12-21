@@ -55,7 +55,7 @@
               </div>
             </div>
             <div class="text-center">
-              <span>Make enquiries or get support? <a href="contact" class="hover-arrow">Get in touch</a>
+              <span>Make enquiries or get support? <br><a href="contact" class="hover-arrow">Get in touch</a>
               </span>
             </div>
           </div>

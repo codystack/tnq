@@ -35,7 +35,7 @@
 
     <section class="row no-gutters min-vh-100 p-0">
       <div class="col-lg-4 bg-primary-3 d-flex justify-content-end">
-        <img src="https://i.imgur.com/UZ1nV5O.jpg" alt="Image" class="bg-image" >
+        <img src="https://i.imgur.com/q1NRN7s.jpg alt="Image" class="bg-image" >
         <div class="divider divider-vertical d-none d-lg-block" style="height: 100%;">
           <img src="assets/img/dividers/divider-vertical-1.svg" alt="graphical divider" data-inject-svg />
         </div>

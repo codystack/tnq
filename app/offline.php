@@ -1,8 +1,8 @@
 <?php
-include('./components/header.php');
 session_start();
+include('./components/header.php');
 $_SESSION['message'] = '';
-include ('./config/db.php');
+$conn = new mysqli('localhost', 'nigeabvg_tnq', 'Webify2020!!', 'nigeabvg_tnq');
 
 if (isset($_POST['register_btn'])) {
 
@@ -24,7 +24,7 @@ if (isset($_POST['register_btn'])) {
     $picture_path = $conn->real_escape_string('upload/'.uniqid().rand().$_FILES['picture']['name']);
     }
     
-    if (file_exists($picture_path1)) 
+    if (file_exists($proof_path)) 
 	{
     $proof_path = $conn->real_escape_string('upload/'.uniqid().rand().$_FILES['proof']['name']);
     }
@@ -77,7 +77,7 @@ if (isset($_POST['register_btn'])) {
                     }
                     mysqli_query($conn, $sql);
                     $_SESSION['email'] = $email;
-                    header("Location: regsuccess");
+                    header("Location: ../regsuccess");
                     exit();   
             }
 }
@@ -114,7 +114,8 @@ if (isset($_POST['register_btn'])) {
           <div class="card bg-secondary border-0">
             <div class="card-body px-lg-5 py-lg-5">
               <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data" autocomplete="on">
-              <div class="text-muted text-right mt-2 mb-4" value="10000" id="amount"><small><strong>REGISTRATION FEE ₦10,000</strong></small></div>
+              <div class="text-muted text-right mt-2 mb-2"><small><strong>REGISTRATION FEE ₦10,000</strong></small></div>
+              <div class="alert-danger text-center mb-3" role="alert" id="message"><?= $_SESSION['message'] ?></div>
                 <div class="form-group">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
@@ -144,7 +145,7 @@ if (isset($_POST['register_btn'])) {
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
                     </div>
-                    <input class="form-control" pattern="[0-9]+" minlength="11" required placeholder="Phone Number" type="tel" name="pnumber">
+                    <input class="form-control" pattern="[0-9]+" minlength="11" required placeholder="Phone Number" type="tel" name="phone">
                   </div>
                 </div>
                 <div class="text-muted text-left"><small class="">Upload proof of payment</small></div>
@@ -264,7 +265,7 @@ if (isset($_POST['register_btn'])) {
                 </div>
                 <div class="text-muted text-left"><small class="">Upload photograph</small></div>
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" name="piture" required lang="en">
+                    <input type="file" class="custom-file-input" name="picture" required lang="en">
                     <label class="custom-file-label" for="customFileLang">Select file</label>
                 </div>
                 <div class="row my-4">

@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Register :: Nigerian Queen™</title>
+    <title>Nigerian Queen™ :: Beauty for Purpose</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:url" content="https://voteonline.com.ng/">
     <meta property="og:type" content="website">
@@ -27,38 +27,31 @@
     <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2113ffa3185856e2343592157/3e465356717a7cc083cfb2e03.js");</script>
   </head>
-
   <body>
     <div class="loader">
       <div class="loading-animation"></div>
     </div>
 
-    <section class="row no-gutters min-vh-100 p-0">
-      <div class="col-lg-4 bg-primary-3 d-flex justify-content-end">
-        <img src="https://i.imgur.com/q1NRN7s.jpg" alt="Image" class="bg-image" >
-        <div class="divider divider-vertical d-none d-lg-block" style="height: 100%;">
-          <img src="assets/img/dividers/divider-vertical-1.svg" alt="graphical divider" data-inject-svg />
+    <section class="min-vh-100-light py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <a href="\">
+              <img src="https://i.imgur.com/OHRyC4K.png" alt="TNQ" width="250px;">
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="col px-5 position-relative d-flex align-items-center">
-        <div class="row justify-content-center w-100">
-          <div class="col-md-8 col-lg-7 col-xl-6">
-            <div class="text-center mb-4">
-              <h1 class="mb-1">TNQ Registration</h1>
-              <span>Register using any mode of payment that suits you, the payonline allows you to pay using your debit or credit card while the bank transfer allows you register by making payment through bank deposit or transfer.</span>
-            </div>
-            <div class="col-12 col-xl-12 text-center d-flex justify-content-center">
-              <div class="form-group" style="margin-left: 2px; margin-right: 2px;">
-                <a class="btn btn-primary" href="app">Pay Online</a>
+        <div class="row text-center py-6">
+          <div class="col">
+            <div class="decoration-check mb-4">
+              <div class="decoration">
+                <img class="bg-primary-2" src="assets/img/decorations/deco-blob-6.svg" alt="deco-blob-6 decoration" data-inject-svg />
               </div>
-              <div class="form-group" style="margin-left: 2px; margin-right: 2px;">
-                <a class="btn btn-secondary" href="bank-details">Bank Transfer</a>
-              </div>
+              <img class="icon bg-white" src="assets/img/icons/interface/check.svg" alt="check interface icon" data-inject-svg />
             </div>
-            <div class="text-center">
-              <span>Make enquiries or get support? <br><a href="contact" class="hover-arrow">Get in touch</a>
-              </span>
-            </div>
+            <h2 class="h1">Registration Successful</h2>
+            <div class="lead mb-4">Welcome to the Nigerian Queen Family! 🙏 <br>You’ll receieve an email confirming registration shortly.</div>
+            <a class="btn btn-primary btn-lg" href="\">Go Back to Home</a>
           </div>
         </div>
       </div>
@@ -69,7 +62,7 @@
     <script type="text/javascript" src="assets/js/popper.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 
-    <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+
     <script type="text/javascript" src="assets/js/aos.js"></script>
     <!-- Clipboard (copies content from browser into OS clipboard) -->
     <script type="text/javascript" src="assets/js/clipboard.js"></script>
@@ -107,18 +100,12 @@
     <script type="text/javascript" src="assets/js/typed.min.js"></script>
     <!-- Required theme scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/theme.js"></script>
-    <script src="https://js.paystack.co/v1/inline.js"></script>
-    <script type="text/javascript" src="assets/js/pay.js"></script>
 
     <script type="text/javascript">
-      // This script appears only in the demo - it disables forms with no action attribute to prevent 
-      // navigating away from the page.
       jQuery("form:not([action])").on('submit', function(){return true;});
     </script>
 
-
   </body>
-
 
 
 </html>

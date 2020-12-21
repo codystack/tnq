@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 
@@ -36,29 +39,133 @@
     <section class="row no-gutters min-vh-100 p-0">
       <div class="col-lg-4 bg-primary-3 d-flex justify-content-end">
         <img src="https://i.imgur.com/UZ1nV5O.jpg" alt="Image" class="bg-image" >
-        <div class="divider divider-vertical d-none d-lg-block" style="height: 100%;">
+        <!--<div class="divider divider-vertical d-none d-lg-block" style="height: 100%;">
           <img src="assets/img/dividers/divider-vertical-1.svg" alt="graphical divider" data-inject-svg />
-        </div>
+        </div>-->
       </div>
       <div class="col px-5 position-relative d-flex align-items-center">
         <div class="row justify-content-center w-100">
           <div class="col-md-8 col-lg-7 col-xl-6">
             <div class="text-center mb-4">
-              <h1 class="mb-1">TNQ Registration</h1>
-              <span>Register using any mode of payment that suits you, the payonline allows you to pay using your debit or credit card while the bank transfer allows you register by making payment through bank deposit or transfer.</span>
+              <h1 class="mb-1">REGISTRATION</h1>
+              <span>Please kindly fill in your details correctly in the form below.</span>
             </div>
-            <div class="col-md-12 col-lg-12 col-xl-12 text-center" style="display: -webkit-inline-box;">
-              <div class="form-group" style="padding-right: 10px;">
-                <a class="btn-lg btn btn-primary" href="app">Pay Online</a>
+            <form id="paymentForm" onSubmit="return false;">
+            <small class="text-muted float-right">REGISTRATION FEE ₦10,000</small>  
+            <div class="form-group">
+                <input type="text" name="fname" id="fname" placeholder="First Name" required class="form-control">
               </div>
-              <div class="form-group" style="padding-right: 10px;">
-                <a class="btn-lg btn btn-secondary" href="bank-details">Bank Transfer</a>
+              <div class="form-group">
+                <input type="text" name="lname" placeholder="Last Name" required class="form-control">
               </div>
+              <div class="form-group">
+                <input type="email" name="email" id="email" placeholder="Email Address" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="tel" name="phone" placeholder="Phone Number" required class="form-control">
+              </div>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">@</span>
+                </div>
+                <input type="text" class="form-control" name="ighandle" placeholder="Instagram Handle" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="address" placeholder="Residential Address" required class="form-control">
+              </div>
+              <div class="form-group">
+                <select class="form-control" name="age" required="">
+                <option selected>Age</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                </select>
             </div>
-            <div class="text-center">
-              <span>Make enquiries or get support? <a href="contact" class="hover-arrow">Get in touch</a>
-              </span>
-            </div>
+            <div class="form-group">
+                  <select class="form-control" required name="state">
+                    <option data-display="State Of Origin">State Of Origin</option>
+                    <option value="Abia">Abia</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Bauchi">Bauchi</option>
+                    <option value="Bayelsa">Bayelsa</option>
+                    <option value="Benue">Benue</option>
+                    <option value="Borno">Borno</option>
+                    <option value="Cross River">Cross River</option>
+                    <option value="Delta">Delta</option>
+                    <option value="Ebonyi">Ebonyi</option>
+                    <option value="Edo">Edo</option>
+                    <option value="Ekiti">Ekiti</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="Abuja">FCT - Abuja</option>
+                    <option value="Gombe">Gombe</option>
+                    <option value="Imo">Imo</option>
+                    <option value="Jigawa">Jigawa</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Kano">Kano</option>
+                    <option value="Katsina">Katsina</option>
+                    <option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option>
+                    <option value="Kwara">Kwara</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Nasarawa">Nasarawa</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Ogun">Ogun</option>
+                    <option value="Ondo">Ondo</option>
+                    <option value="Osun">Osun</option>
+                    <option value="Oyo">Oyo</option>
+                    <option value="Plateau">Plateau</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option>
+                    <option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamfara</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select class="form-control" required name="city">
+                    <option data-display="Preferred Audition City">Preferred Audition City</option>
+                    <option value="Abuja">Abuja</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Anambra">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Calabar">Calabar</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="Ibadan">Ibadan</option>
+                    <option value="Ilorin">Ilorin</option>
+                    <option value="Jos">Jos</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Owerri">Owerri</option>
+                  </select>                  
+                </div>
+              <div class="form-group">
+                <input type="text" style="display: non;" name="signup-password-confirm" value="10000" id="amount" class="form-control">
+              </div>
+                <div class="form-group">
+                    <label for="picture">Upload photograph</label>
+                    <input type="file" class="form-control-file" id="picture" name="picture">
+                </div>
+              <div class="form-group custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" required id="signup-agree">
+                <label class="custom-control-label text-small text-muted" for="signup-agree">I agree to the <a href="terms">Terms &amp; Conditions</a>
+                </label>
+              </div>
+              <div class="form-group">
+                <button class="btn-block btn btn-primary" onclick="payWithPaystack()">Register</button>
+              </div>
+              
+            </form>
           </div>
         </div>
       </div>

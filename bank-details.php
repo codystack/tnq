@@ -44,15 +44,14 @@
         <div class="row justify-content-center w-100">
           <div class="col-md-8 col-lg-7 col-xl-6">
             <div class="text-center mb-4">
-              <h1 class="mb-1">TNQ Registration</h1>
-              <span>Register using any mode of payment that suits you, the payonline allows you to pay using your debit or credit card while the bank transfer allows you register by making payment through bank deposit or transfer.</span>
+              <h1 class="mb-1">Bank Transfer</h1>
+              <span>Make payment to <strong>₦10,000</strong> to the account information below.<br><strong>Account Name:</strong> 001 ENTERTAINMENT LIMITED<br><strong>Account Number:</strong> 1015498619<br><strong>Bank Name:</strong> Zenith Bank</span>
+              <hr>
+              <span>Take a screenshot of the proof payment and use while processing your registration.</span>
             </div>
-            <div class="col-md-12 col-lg-12 col-xl-12 text-center" style="display: -webkit-inline-box;">
-              <div class="form-group" style="padding-right: 10px;">
-                <a class="btn-lg btn btn-primary" href="app">Pay Online</a>
-              </div>
-              <div class="form-group" style="padding-right: 10px;">
-                <a class="btn-lg btn btn-secondary" href="bank-details">Bank Transfer</a>
+            <div class="col-md-12 col-lg-12 col-xl-12 text-center">
+              <div class="form-group">
+                <a class="btn-lg btn btn-primary" href="app/offline">Register Now</a>
               </div>
             </div>
             <div class="text-center">

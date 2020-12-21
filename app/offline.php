@@ -113,7 +113,7 @@ if (isset($_POST['register_btn'])) {
         <div class="col-lg-6 col-md-8">
           <div class="card bg-secondary border-0">
             <div class="card-body px-lg-5 py-lg-5">
-              <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" autocomplete="on">
+              <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data" autocomplete="on">
               <div class="text-muted text-right mt-2 mb-4" value="10000" id="amount"><small><strong>REGISTRATION FEE ₦10,000</strong></small></div>
                 <div class="form-group">
                   <div class="input-group input-group-merge input-group-alternative">

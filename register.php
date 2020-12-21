@@ -47,12 +47,12 @@
               <h1 class="mb-1">TNQ Registration</h1>
               <span>Register using any mode of payment that suits you, the payonline allows you to pay using your debit or credit card while the bank transfer allows you register by making payment through bank deposit or transfer.</span>
             </div>
-            <div class="col-md-12 col-lg-12 col-xl-12 text-center" style="display: -webkit-inline-box;">
-              <div class="form-group" style="padding-right: 10px;">
-                <a class="btn-lg btn btn-primary" href="app">Pay Online</a>
+            <div class="col-12 col-xl-12 text-center d-flex justify-content-center">
+              <div class="form-group" style="margin-left: 2px; margin-right: 2px;">
+                <a class="btn btn-primary" href="app">Pay Online</a>
               </div>
-              <div class="form-group" style="padding-right: 10px;">
-                <a class="btn-lg btn btn-secondary" href="bank-details">Bank Transfer</a>
+              <div class="form-group" style="margin-left: 2px; margin-right: 2px;">
+                <a class="btn btn-secondary" href="bank-details">Bank Transfer</a>
               </div>
             </div>
             <div class="text-center">

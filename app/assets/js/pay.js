@@ -1,22 +1,51 @@
-var paymentForm = document.getElementById('paymentForm');
-paymentForm.addEventListener('submit', payWithPaystack, false);
-
 function payWithPaystack() {
-    var handler = PaystackPop.setup({
-        key: 'pk_test_ea04de6bebb2fb06fc7a7331e45e83c44f5a5b70', // Replace with your public key
-        email: document.getElementById('email-address').value,
-        amount: document.getElementById('amount').value * 100, // the amount value is multiplied by 100 to convert to the lowest currency unit
-        currency: 'NGN', // Use GHS for Ghana Cedis or USD for US Dollars
-        ref: 'YOUR_REFERENCE', // Replace with a reference you generated
-        callback: function(response) {
-            //this happens after the payment is completed successfully
-            var reference = response.reference;
-            alert('Payment complete! Reference: ' + reference);
-            // Make an AJAX call to your server with the reference to verify the transaction
+    var myref=Math.floor((Math.random() * 1000000000) + 1);
+    let handler = PaystackPop.setup({
+        key: 'pk_test_274c204e073e2b9d908430573ba1603a843c66d4', // Replace with your public key
+        email: document.getElementById("email").value,
+        amount: 10000 * 100,
+        ref: ''+myref,
+        onClose: function(){
+
         },
-        onClose: function() {
-            alert('Transaction was not completed, window closed.');
-        },
+        callback: function(response){
+            if(myref==response.reference){
+                submitData();
+                location.replace("../regsuccess")
+            }
+        }
     });
     handler.openIframe();
+}
+
+
+function submitData(){
+    //$('#success-message').hide(400);
+    //$('#error-message').hide(400);
+    var x=$.ajax({
+    type: "POST",
+    url: './config/controller.php',
+    contentType: false,
+    data: new FormData($('#register-form').get(0)),
+    dataType: "text",
+    processData: false,
+    cache:false
+    });
+    
+    x.done(function(serverResponse) {
+        var x = serverResponse.trim();
+        //if (x == 'success'){
+            //$('#success-message').show(400);
+        //}else {
+            //$('#error-message').show(400);
+        //}
+    });
+    
+    x.fail(function(){
+        
+    });
+    
+    x.always(function(){
+        //$('#spinner').hide();
+    });
 }

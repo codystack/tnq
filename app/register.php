@@ -1,6 +1,6 @@
 <?php
-include('./components/header.php');
 session_start();
+include('./components/header.php');
 ?>
 
   <!-- Main content -->
@@ -33,8 +33,9 @@ session_start();
         <div class="col-lg-6 col-md-8">
           <div class="card bg-secondary border-0">
             <div class="card-body px-lg-5 py-lg-5">
-              <form role="form" onSubmit="return false;" id="paymentForm">
-              <div class="text-muted text-right mt-2 mb-4" value="10000" id="amount"><small><strong>REGISTRATION FEE ₦10,000</strong></small></div>
+            <div class="text-muted text-right mt-2 mb-2"><small><strong>REGISTRATION FEE ₦10,000</strong></small></div>
+              <form role="form" id="register-form" onSubmit="return false;">
+              <div class="alert-danger text-center mb-3" role="alert" id="message"><?= $_SESSION['message'] ?></div>
                 <div class="form-group">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
@@ -56,7 +57,7 @@ session_start();
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required type="email" name="email">
+                    <input class="form-control" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required type="email" id="email" name="email">
                   </div>
                 </div>
                 <div class="form-group">
@@ -64,28 +65,9 @@ session_start();
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
                     </div>
-                    <input class="form-control" pattern="[0-9]+" minlength="11" required placeholder="Phone Number" type="tel" name="pnumber">
+                    <input class="form-control" pattern="[0-9]+" minlength="11" required placeholder="Phone Number" type="tel" name="phone">
                   </div>
                 </div>
-                <!--<div class="form-group">
-                  <div class="input-group input-group-merge input-group-alternative">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                    </div>
-                    <input class="form-control" id="txtPassword" placeholder="Password"
-  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required type="password" name="password">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="input-group input-group-merge input-group-alternative">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                    </div>
-                    <input class="form-control" id="txtConfirmPassword" required placeholder="Confirm Password" type="password" name="confirm_password">
-                  </div>
-                </div>-->
-                
-                <hr>
                 <div class="form-group">
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -178,8 +160,9 @@ session_start();
                     <option value="Owerri">Owerri</option>
                   </select>                  
                 </div>
+                <div class="text-muted text-left"><small class="">Upload photograph</small></div>
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" name="piture" required lang="en">
+                    <input type="file" class="custom-file-input" name="picture" required lang="en">
                     <label class="custom-file-label" for="customFileLang">Select file</label>
                 </div>
                 <div class="row my-4">
@@ -193,7 +176,7 @@ session_start();
                   </div>
                 </div>
                 <div class="text-center">
-                  <button class="btn btn-primary mt-4" onclick="payWithPaystack()">Create account</button>
+                  <button class="btn btn-primary mt-4" onClick="payWithPaystack()">Submit Application</button>
                 </div>
               </form>
             </hr>
@@ -201,7 +184,7 @@ session_start();
         </div>
         <div class="row mt-3">
             <div class="col-12 text-center">
-              <a href="\" class="text-default-color"><strong>GO BACK TO HOME</strong></a>
+              <a href="..\" class="text-default-color"><strong>GO BACK TO HOME</strong></a>
             </div>
         </div>
       </div>

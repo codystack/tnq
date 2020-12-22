@@ -11,7 +11,6 @@ function payWithPaystack() {
         callback: function(response){
             if(myref==response.reference){
                 submitData();
-                location.replace("../regsuccess")
             }
         }
     });
@@ -31,6 +30,7 @@ function submitData(){
     processData: false,
     cache:false
     });
+    location.replace("../regsuccess")
     
     x.done(function(serverResponse) {
         var x = serverResponse.trim();

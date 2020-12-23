@@ -1,5 +1,5 @@
 <?php
-error_log("am here");
+error_log("just here");
 include ('./config/db.php');
 //add the db call here
 if ((strtoupper($_SERVER['REQUEST_METHOD']) != 'POST' ) || !array_key_exists('HTTP_X_PAYSTACK_SIGNATURE', $_SERVER) ) {
@@ -16,6 +16,8 @@ if(!$_SERVER['HTTP_X_PAYSTACK_SIGNATURE'] || ($_SERVER['HTTP_X_PAYSTACK_SIGNATUR
 http_response_code(200);
 // parse event (which is json string) as object
 // Do something - that will not take long - with $event
+
+
 
 //loop and check which event is recieved and act accordingly
 echo $input;
@@ -38,18 +40,16 @@ switch($event->event){
         break;
     // charge.success
     case 'charge.success':
+echo "Charge Successful";
 
-error_log("charge successful");
 
 $event = json_decode($input);
 $email=$event->data->customer->email;
 
+
 mysqli_query($conn," UPDATE users SET status='true' WHERE email='$email' ");
 
-if(mysqli_affected_rows($conn)<1)
-{
-error_log("error is".mysqli_error($conn));
-}
+
      
         break;
     // subscription.disable

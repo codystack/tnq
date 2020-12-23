@@ -41,8 +41,8 @@ $conn = new mysqli('localhost', 'nigeabvg_tnq', 'Webify2020!!', 'nigeabvg_tnq');
                 //copy image to upload folder
                 copy($_FILES['picture']['tmp_name'], $picture_path);
 
-                $sql = "INSERT INTO users (fname, lname, email, phone, state, age, city, ighandle, address, picture, regno)"
-                    . "VALUES ('$fname', '$lname', '$email', '$phone', '$state', '$age', '$city', '$ighandle', '$address', '$picture_path', '$regno')";
+                $sql = "INSERT INTO users (fname, lname, email, phone, state, age, city, ighandle, address, picture, regno, status)"
+                    . "VALUES ('$fname', '$lname', '$email', '$phone', '$state', '$age', '$city', '$ighandle', '$address', '$picture_path', '$regno', 'false')";
                     if($query){
 
                         //Send Verification Mail

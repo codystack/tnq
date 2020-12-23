@@ -17,52 +17,24 @@ http_response_code(200);
 // parse event (which is json string) as object
 // Do something - that will not take long - with $event
 
-
-
 //loop and check which event is recieved and act accordingly
-echo $input;
 $event = json_decode($input);
-switch($event->event){
+$xx=$event->event;
+error_log($xx);
+if($xx=='charge.success')
+{
 
-    // subscription.create
-    case 'subscription.create':
-
-//this event is fired ONLY when a new subscription is initiated manually, NOT on autorenewal
-//pick some parameters first to know the plan the person is subscribing for
- //$event = json_decode($input);
-//$subscriptioncode=$event->data->subscription_code;
-//$email=$event->data->customer->email;
-//get the email token using curl
-
-
-
- 
-        break;
-    // charge.success
-    case 'charge.success':
-echo "Charge Successful";
-
-
-$event = json_decode($input);
 $email=$event->data->customer->email;
-
-
+error_log("email is ".$email);
 mysqli_query($conn," UPDATE users SET status='true' WHERE email='$email' ");
 
-
-     
-        break;
-    // subscription.disable
-    case 'subscription.disable':
-         error_log("subscription disabled"); 
-//do sth when subscription is disabled
-        break;
-    // invoice.create and invoice.update
-    case 'invoice.create':
-         error_log("invoice was created"); 
-    case 'invoice.update':
-        break;
+if(mysqli_affected_rows($conn)<1)
+{
+error_log(mysqli_error($conn));
 }
+
+}
+
 
 //http_response_code(200);
 exit();

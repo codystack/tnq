@@ -38,12 +38,11 @@ switch($event->event){
     // charge.success
     case 'charge.success':
 
-
+error_log("charge successful");
 
 $event = json_decode($input);
 $email=$event->data->customer->email;
 
-error_log("tnq 2022");
 mysqli_query($conn," UPDATE users SET status='true' WHERE email='$email' ");
 
 if(mysqli_affected_rows($conn)<1)

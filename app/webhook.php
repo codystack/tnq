@@ -1,4 +1,5 @@
 <?php
+include ('./config/db.php');
 //add the db call here
 if ((strtoupper($_SERVER['REQUEST_METHOD']) != 'POST' ) || !array_key_exists('HTTP_X_PAYSTACK_SIGNATURE', $_SERVER) ) {
     // only a post with paystack signature header gets our attention
@@ -14,8 +15,6 @@ if(!$_SERVER['HTTP_X_PAYSTACK_SIGNATURE'] || ($_SERVER['HTTP_X_PAYSTACK_SIGNATUR
 http_response_code(200);
 // parse event (which is json string) as object
 // Do something - that will not take long - with $event
-
-
 
 //loop and check which event is recieved and act accordingly
 $event = json_decode($input);

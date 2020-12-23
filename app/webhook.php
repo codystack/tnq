@@ -1,5 +1,5 @@
 <?php
-error_log("tnq 2021");
+error_log("am here");
 include ('./config/db.php');
 //add the db call here
 if ((strtoupper($_SERVER['REQUEST_METHOD']) != 'POST' ) || !array_key_exists('HTTP_X_PAYSTACK_SIGNATURE', $_SERVER) ) {
@@ -18,6 +18,7 @@ http_response_code(200);
 // Do something - that will not take long - with $event
 
 //loop and check which event is recieved and act accordingly
+echo $input;
 $event = json_decode($input);
 switch($event->event){
 

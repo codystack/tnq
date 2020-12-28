@@ -30,7 +30,6 @@ function submitData(){
     processData: false,
     cache:false
     });
-    location.replace("../regsuccess")
     
     x.done(function(serverResponse) {
         var x = serverResponse.trim();

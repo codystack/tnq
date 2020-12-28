@@ -53,8 +53,8 @@ if (isset($_POST['register_btn'])) {
                 copy($_FILES['picture']['tmp_name'], $picture_path);
                 copy($_FILES['proof']['tmp_name'], $proof_path);
 
-                $sql = "INSERT INTO users (fname, lname, email, phone, state, age, city, ighandle, address, picture, proof, regno)"
-                    . "VALUES ('$fname', '$lname', '$email', '$phone', '$state', '$age', '$city', '$ighandle', '$address', '$picture_path', '$proof_path', '$regno')";
+                $sql = "INSERT INTO users (fname, lname, email, phone, state, age, city, ighandle, address, picture, proof, regno, status)"
+                    . "VALUES ('$fname', '$lname', '$email', '$phone', '$state', '$age', '$city', '$ighandle', '$address', '$picture_path', '$proof_path', '$regno', 'false')";
                     mysqli_query($conn, $sql);
             }
                 if(mysqli_affected_rows($conn)>0){

@@ -189,10 +189,10 @@ if (isset($_POST['register_btn'])) {
               }else{
                   error_log("Error is " .mysqli_error($conn));
               }
-                    $_SESSION['email'] = $email;  
+                    $_SESSION['email'] = $email;
+                    header("Location: ../regsuccess");
+                    exit();   
 }
-header("Location: ../regsuccess");
-exit(); 
 ?>
 
   <!-- Main content -->

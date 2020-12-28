@@ -183,4 +183,3 @@ $conn = new mysqli('localhost', 'nigeabvg_tnq', 'Webify2020!!', 'nigeabvg_tnq');
                     }
                     $_SESSION['email'] = $email;
             }
-            header("location: ../register.php");

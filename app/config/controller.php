@@ -182,5 +182,5 @@ $conn = new mysqli('localhost', 'nigeabvg_tnq', 'Webify2020!!', 'nigeabvg_tnq');
                         error_log("Error is " .mysqli_error($conn));
                     }
                     $_SESSION['email'] = $email;
+                    header("location: ../register.php");
             }
-            header("location: ../register.php");

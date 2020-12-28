@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('./components/header.php');
 ?>
 
@@ -158,6 +157,7 @@ include('./components/header.php');
                     <option value="Kaduna">Kaduna</option>
                     <option value="Lagos">Lagos</option>
                     <option value="Owerri">Owerri</option>
+                    <option value="Port Harcourt">Port Harcourt</option>
                   </select>                  
                 </div>
                 <div class="text-muted text-left"><small class="">Upload photograph</small></div>

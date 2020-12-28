@@ -1,6 +1,5 @@
 <?php
-error_log("just here");
-include ('./config/db.php');
+$conn = new mysqli('localhost', 'nigeabvg_tnq', 'Webify2020!!', 'nigeabvg_tnq');
 //add the db call here
 if ((strtoupper($_SERVER['REQUEST_METHOD']) != 'POST' ) || !array_key_exists('HTTP_X_PAYSTACK_SIGNATURE', $_SERVER) ) {
     // only a post with paystack signature header gets our attention
@@ -20,18 +19,18 @@ http_response_code(200);
 //loop and check which event is recieved and act accordingly
 $event = json_decode($input);
 $xx=$event->event;
-error_log($xx);
 if($xx=='charge.success')
 {
 
-$email=$event->data->customer->email;
-error_log("email is ".$email);
-mysqli_query($conn," UPDATE users SET status='true' WHERE email='$email' ");
+  $email=$event->data->customer->email;
 
-if(mysqli_affected_rows($conn)<1)
-{
-error_log(mysqli_error($conn));
-}
+  $result=mysqli_query($conn," SELECT * from users where email='$email'");
+  if(mysqli_num_rows($result)>0) {
+    mysqli_query($conn," UPDATE users SET status='true' WHERE email='$email'");
+  }else {
+      $sql = "INSERT INTO users (email,status) VALUES ('$email','true')";
+      mysqli_query($conn, $sql);
+  }
 
 }
 

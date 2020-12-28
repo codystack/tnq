@@ -146,6 +146,7 @@ if (isset($_POST['register_btn'])) {
                                                   </p>
                                                   <p class='mgb-1x'>Copy the Reistration number below and keep safe.</p>
                                                   <strong>Reg No:</strong> $regno
+                                                  <p class='mgb-1x'>Please <strong>NOTE</strong> that the Reg No. becomes valid once payment has been verified.</p>
                                               </td>
                                           </tr>
                                           <tr>

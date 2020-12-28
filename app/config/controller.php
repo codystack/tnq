@@ -1,5 +1,4 @@
 <?php
-$_SESSION['message'] = '';
 $conn = new mysqli('localhost', 'nigeabvg_tnq', 'Webify2020!!', 'nigeabvg_tnq');
 
     $fname          = $conn->real_escape_string($_POST['fname']);

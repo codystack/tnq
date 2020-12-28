@@ -33,7 +33,7 @@ include('./components/header.php');
           <div class="card bg-secondary border-0">
             <div class="card-body px-lg-5 py-lg-5">
             <div class="text-muted text-right mt-2 mb-2"><small><strong>REGISTRATION FEE ₦10,000</strong></small></div>
-              <form role="form" id="register-form" onSubmit="return false;">
+              <form role="form" id="register-form" onSubmit="return false;" enctype="multipart/form-data">
 
                 <div class="form-group">
                   <div class="input-group input-group-merge input-group-alternative">

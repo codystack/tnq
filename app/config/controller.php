@@ -37,8 +37,6 @@ $conn = new mysqli('localhost', 'nigeabvg_tnq', 'Webify2020!!', 'nigeabvg_tnq');
                 $_SESSION['message'] = "User already exist!";
                 }
             }else { 
-                //copy image to upload folder
-                copy($_FILES['picture']['tmp_name'], $picture_path);
                 $result=mysqli_query($conn," SELECT * from users where email='$email'");
                 if(mysqli_num_rows($result)>0) {
                     mysqli_query($conn, "UPDATE users SET fname='$fname', lname='$lname', phone='$phone', state='$state', age='$age', city='$city', ighandle='$ighandle', address='$address', picture='$picture_path', regno='$regno' WHERE email='$email'");
@@ -49,8 +47,6 @@ $conn = new mysqli('localhost', 'nigeabvg_tnq', 'Webify2020!!', 'nigeabvg_tnq');
                     $sql = "INSERT INTO users (fname, lname, email, phone, state, age, city, ighandle, address, picture, regno, status)"
                     . "VALUES ('$fname', '$lname', '$email', '$phone', '$state', '$age', '$city', '$ighandle', '$address', '$picture_path', '$regno', 'false')";
                     mysqli_query($conn, $sql);
-                    //copy image to upload folder
-                    copy($_FILES['picture']['tmp_name'], $picture_path);
                 }
                 
                     if(mysqli_affected_rows($conn)>0){

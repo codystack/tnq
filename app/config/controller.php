@@ -12,11 +12,11 @@ $city           = $conn->real_escape_string($_POST['city']);
 $address        = $conn->real_escape_string($_POST['address']);
 $ighandle       = $conn->real_escape_string($_POST['ighandle']);
 $regno          = 'TNQ'.rand(1000, 9999);
-$picture_path   = $conn->real_escape_string('../upload/'.$_FILES['picture']['name']);
+$picture_path   = $conn->real_escape_string('./upload/'.$_FILES['picture']['name']);
 
 if (file_exists($picture_path)) 
 {
-$picture_path = $conn->real_escape_string('../upload/'.uniqid().rand().$_FILES['picture']['name']);
+$picture_path = $conn->real_escape_string('./upload/'.uniqid().rand().$_FILES['picture']['name']);
 };
 
 $checker = 0;
@@ -184,5 +184,4 @@ if ($user) { // if user exists
     $_SESSION['email'] = $email;
     header("location: ../regsuccess");
 }
-
 ?>

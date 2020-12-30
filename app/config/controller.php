@@ -28,6 +28,8 @@ if (preg_match("!image!", $_FILES['picture']['type'])) {
 if ($checker < 1){
     exit;
 };
+//copy image to upload folder
+copy($_FILES['picture']['tmp_name'], $picture_path);
 
 $user_check_query = "SELECT * FROM users WHERE email='$email' and status='true' and fname not null";
 $result = mysqli_query($conn, $user_check_query);
@@ -39,8 +41,6 @@ if ($user) { // if user exists
 }else { 
     $result=mysqli_query($conn," SELECT * from users where email='$email'");
     if(mysqli_num_rows($result)>0) {
-        //copy image to upload folder
-        copy($_FILES['picture']['tmp_name'], $picture_path);
         mysqli_query($conn, "UPDATE users SET fname='$fname', lname='$lname', phone='$phone', state='$state', age='$age', city='$city', ighandle='$ighandle', address='$address', picture='$picture_path', regno='$regno' WHERE email='$email'");
     }else {
         $sql = "INSERT INTO users (fname, lname, email, phone, state, age, city, ighandle, address, picture, regno, status)"

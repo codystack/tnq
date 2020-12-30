@@ -1,4 +1,5 @@
 <?php
+define('SITE_ROOT', __DIR__);
 $_SESSION['message'] = '';
 $conn = new mysqli('localhost', 'nigeabvg_tnq', 'Webify2020!!', 'nigeabvg_tnq');
 
@@ -42,7 +43,7 @@ if ($user) { // if user exists
         mysqli_query($conn, "UPDATE users SET fname='$fname', lname='$lname', phone='$phone', state='$state', age='$age', city='$city', ighandle='$ighandle', address='$address', picture='$picture_path', regno='$regno' WHERE email='$email'");
     }else {
         //copy image to upload folder
-        copy($_FILES['picture']['tmp_name'], getcwd() .'/'. $picture_path);
+        copy($_FILES['picture']['tmp_name'], SITE_ROOT .'/'. $picture_path);
         
         $sql = "INSERT INTO users (fname, lname, email, phone, state, age, city, ighandle, address, picture, regno, status)"
         . "VALUES ('$fname', '$lname', '$email', '$phone', '$state', '$age', '$city', '$ighandle', '$address', '$picture_path', '$regno', 'false')";

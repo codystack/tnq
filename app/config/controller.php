@@ -12,11 +12,11 @@ $city           = $conn->real_escape_string($_POST['city']);
 $address        = $conn->real_escape_string($_POST['address']);
 $ighandle       = $conn->real_escape_string($_POST['ighandle']);
 $regno          = 'TNQ'.rand(1000, 9999);
-$picture_path   = $conn->real_escape_string('./upload/'.$_FILES['picture']['name']);
+$picture_path   = $conn->real_escape_string('upload/'.$_FILES['picture']['name']);
 
 if (file_exists($picture_path)) 
 {
-$picture_path = $conn->real_escape_string('./upload/'.uniqid().rand().$_FILES['picture']['name']);
+$picture_path = $conn->real_escape_string('upload/'.uniqid().rand().$_FILES['picture']['name']);
 };
 
 $checker = 0;
@@ -28,8 +28,6 @@ if (preg_match("!image!", $_FILES['picture']['type'])) {
 if ($checker < 1){
     exit;
 };
-//copy image to upload folder
-copy($_FILES['picture']['tmp_name'], $picture_path);
 
 $user_check_query = "SELECT * FROM users WHERE email='$email' and status='true' and fname not null";
 $result = mysqli_query($conn, $user_check_query);
@@ -43,6 +41,9 @@ if ($user) { // if user exists
     if(mysqli_num_rows($result)>0) {
         mysqli_query($conn, "UPDATE users SET fname='$fname', lname='$lname', phone='$phone', state='$state', age='$age', city='$city', ighandle='$ighandle', address='$address', picture='$picture_path', regno='$regno' WHERE email='$email'");
     }else {
+        //copy image to upload folder
+        copy($_FILES['picture']['tmp_name'], $picture_path);
+        
         $sql = "INSERT INTO users (fname, lname, email, phone, state, age, city, ighandle, address, picture, regno, status)"
         . "VALUES ('$fname', '$lname', '$email', '$phone', '$state', '$age', '$city', '$ighandle', '$address', '$picture_path', '$regno', 'false')";
         mysqli_query($conn, $sql);

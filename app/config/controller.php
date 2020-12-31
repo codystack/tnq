@@ -14,11 +14,11 @@
     $address        = mysqli_real_escape_string($conn, $_POST['address']);
     $ighandle       = mysqli_real_escape_string($conn, $_POST['ighandle']);
     $regno          = 'TNQ'.rand(1000, 9999);
-    $picture_path   = mysqli_real_escape_string($conn, './upload/'.$_FILES['picture']['name']);
+    $picture_path   = mysqli_real_escape_string($conn, 'upload/'.$_FILES['picture']['name']);
 
     if (file_exists($picture_path)) 
 	{
-    $picture_path = mysqli_real_escape_string($conn, './upload/'.uniqid().rand().$_FILES['picture']['name']);
+    $picture_path = mysqli_real_escape_string($conn, 'upload/'.uniqid().rand().$_FILES['picture']['name']);
     };
 
     $checker = 0;

@@ -23,7 +23,7 @@ function submitData(){
     //$('#error-message').hide(400);
     var x=$.ajax({
     type: "POST",
-    url: './register.php',
+    url: './config/controller.php',
     contentType: false,
     data: new FormData($('#register-form').get(0)),
     dataType: "text",

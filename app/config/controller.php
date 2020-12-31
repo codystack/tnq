@@ -1,5 +1,3 @@
-?>
-
 <?php
     $_SESSION['message'] = '';
     $conn = mysqli_connect('localhost', 'nigeabvg_tnq', 'Webify2020!!', 'nigeabvg_tnq') or die("Na na na!...");
@@ -184,7 +182,6 @@
             error_log("Error is " .mysqli_error($conn));
         };
         $_SESSION['email'] = $email;
-        header("location: ../regsuccess");
     }
 
 ?>

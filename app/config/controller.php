@@ -31,11 +31,9 @@
 
     $user_check_query = "SELECT * FROM users WHERE email='$email' and status='true' and fname not null";
     $result = mysqli_query($conn, $user_check_query);
-    $user = mysqli_fetch_assoc($result);
-    if ($user) { // if user exists
-        if ($user['email'] === $email) {
+    if(mysqli_num_rows($result)>0) {
+        error_log('user already exist');
             $_SESSION['message'] = "User already exist!";
-            }
     }else { 
         $result=mysqli_query($conn," SELECT * from users where email='$email'");
         if(mysqli_num_rows($result)>0) {

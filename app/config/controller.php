@@ -29,7 +29,7 @@
         exit;
     };
 
-    $user_check_query = "SELECT * FROM users WHERE email='$email' and status='true' and fname not null";
+    $user_check_query = "SELECT * FROM users WHERE email='$email' AND status='true' and fname is NOT NULL";
     $result = mysqli_query($conn, $user_check_query);
     if(mysqli_num_rows($result)>0) {
         error_log('user already exist');

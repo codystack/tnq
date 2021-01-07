@@ -13,7 +13,7 @@
     $ighandle       = mysqli_real_escape_string($conn, $_POST['ighandle']);
     $regno          = 'TNQ'.rand(1000, 9999);
     $picture_path   = mysqli_real_escape_string($conn, 'upload/'.$_FILES['picture']['name']);
-
+    error_log($picture_path);
     if (file_exists($picture_path)) 
 	{
     $picture_path = mysqli_real_escape_string($conn, 'upload/'.uniqid().rand().$_FILES['picture']['name']);
@@ -35,14 +35,16 @@
     if ($user) { // if user exists
         if ($user['email'] === $email) {
             $_SESSION['message'] = "User already exist!";
-            };
+            }
     }else { 
         $result=mysqli_query($conn," SELECT * from users where email='$email'");
         if(mysqli_num_rows($result)>0) {
+            copy($_FILES['picture']['tmp_name'], $picture_path);
             mysqli_query($conn, "UPDATE users SET fname='$fname', lname='$lname', phone='$phone', state='$state', age='$age', city='$city', ighandle='$ighandle', address='$address', picture='$picture_path', regno='$regno' WHERE email='$email'");
         }else {
+            error_log('I came in here');
             //copy image to upload folder
-            copy($_FILES['picture']['tmp_name'], getcwd() .'/'. $picture_path);
+            copy($_FILES['picture']['tmp_name'], $picture_path);
             
             $sql = "INSERT INTO users (fname, lname, email, phone, state, age, city, ighandle, address, picture, regno, status)"
             . "VALUES ('$fname', '$lname', '$email', '$phone', '$state', '$age', '$city', '$ighandle', '$address', '$picture_path', '$regno', 'false')";

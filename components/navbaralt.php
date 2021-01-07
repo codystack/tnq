@@ -37,7 +37,7 @@
               <ul class="navbar-nav">
                 <li class="nav-item">
                   <a href="https://live.nigerianqueen.org/"  class="nav-link" target="_blank">
-                  <img class="icon bg-light" style="height: 30px;" src="assets/img/icons/theme/devices/lte-1.svg" alt="decoration" data-inject-svg />STREAM LIVE</a>
+                  <img class="icon bg-light" style="height: 30px;" src="assets/img/icons/theme/devices/lte-1.svg" alt="decoration" data-inject-svg />REWATCH</a>
                 </li>
               </ul>
             </div>

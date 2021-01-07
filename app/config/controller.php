@@ -35,16 +35,11 @@
         error_log('user already exist');
             $_SESSION['message'] = "User already exist!";
     }else { 
+        move_uploaded_file($_FILES['picture']['tmp_name'], $picture_path);
         $result=mysqli_query($conn," SELECT * from users where email='$email'");
         if(mysqli_num_rows($result)>0) {
-            error_log('I came in here 1');
-            copy($_FILES['picture']['tmp_name'], $picture_path);
-            error_log('I came in here 2');
             mysqli_query($conn, "UPDATE users SET fname='$fname', lname='$lname', phone='$phone', state='$state', age='$age', city='$city', ighandle='$ighandle', address='$address', picture='$picture_path', regno='$regno' WHERE email='$email'");
         }else {
-            error_log('I came in here 3');
-            //copy image to upload folder
-            copy($_FILES['picture']['tmp_name'], $picture_path);
             
             $sql = "INSERT INTO users (fname, lname, email, phone, state, age, city, ighandle, address, picture, regno, status)"
             . "VALUES ('$fname', '$lname', '$email', '$phone', '$state', '$age', '$city', '$ighandle', '$address', '$picture_path', '$regno', 'false')";
@@ -182,7 +177,7 @@
             mail($to,$subject,$message,$headers);
         }else{
             error_log("Error is " .mysqli_error($conn));
-        };
+        }
         $_SESSION['email'] = $email;
     }
 

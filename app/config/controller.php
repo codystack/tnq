@@ -37,10 +37,12 @@
     }else { 
         $result=mysqli_query($conn," SELECT * from users where email='$email'");
         if(mysqli_num_rows($result)>0) {
+            error_log('I came in here 1');
             copy($_FILES['picture']['tmp_name'], $picture_path);
+            error_log('I came in here 2');
             mysqli_query($conn, "UPDATE users SET fname='$fname', lname='$lname', phone='$phone', state='$state', age='$age', city='$city', ighandle='$ighandle', address='$address', picture='$picture_path', regno='$regno' WHERE email='$email'");
         }else {
-            error_log('I came in here');
+            error_log('I came in here 3');
             //copy image to upload folder
             copy($_FILES['picture']['tmp_name'], $picture_path);
             

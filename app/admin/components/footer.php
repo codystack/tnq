@@ -1,42 +1,62 @@
- <!-- Footer -->
- <footer class="py-5" id="footer-main">
-    <div class="container">
-      <div class="row align-items-center justify-content-xl-between">
-        <div class="col-xl-6">
-          <div class="copyright text-center text-xl-left text-muted">
-          &copy; <script>document.write(new Date().getFullYear());</script> All Rights Reserved :: Powered by <a href="https://voteonline.com.ng" class="font-weight-bold ml-1 text-default-color" target="_blank">Vote Online&trade;</a>
-          </div>
+<!-- footer -->
+<div class="footer pb-3 bg-dark text-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="mt-8">
+                        <!-- social media -->
+                    <div class="row">
+                        <div class="offset-lg-3 col-lg-6 col-md-12 col-12">
+                            <div class="text-center">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <a href="https://www.facebook.com/thenigerianqueenorg" target="_blank" class="social-btn sb-facebook sb-round btn-light "><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="https://twitter.com/DNigerianQueen" target="_blank" class="social-btn sb-twitter sb-round btn-light "><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="https://www.youtube.com/channel/UCUI8aQAbfa5J7D5za5IbiVw" target="_blank" class="social-btn sb-youtube sb-round btn-light "><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="https://www.instagram.com/thenigerianqueenorg/" target="_blank" class="social-btn sb-instagram sb-round btn-light "><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">© <script>document.write(new Date().getFullYear());</script> Nigerian Queen.  All Rights Reserved.<br>Built by <a href="https://www.thankgodokoro.codes" target="_blank" style="color: #fff">TeeGee</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-xl-6">
-          <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-            <li class="nav-item">
-              <a href="https://voteonline.com.ng/contact/" class="nav-link text-default-color" target="_blank">Contact Support</a>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </footer>
-  <!-- Vote Online Scripts -->
-  <!-- Core -->
-  <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
-  <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./assets/vendor/js-cookie/js.cookie.js"></script>
-  <script src="./assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-  <script src="./assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-  <!-- Vote Online JS -->
-  <script src="./assets/js/voteonline.js?v=1.2.0"></script>
-  <!-- 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-        $("#regform").click(function(){
-            $("#registeredToggle, #registeredToggle1").toggle(500);
-            $("#buttonToggle").text($("#buttonToggle").text() == 'Activate Account' ? 'Create ccount' : 'Activate Account');
-        });
-    });
-  </script>
--->
-</body>
+
+    <!-- Optional JavaScript -->
+    
+		
+    <!-- Libs JS -->
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/libs/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="assets/libs/prismjs/prism.js"></script>
+    <script src="assets/libs/leaflet/dist/leaflet.js"></script>
+    <script src="assets/libs/moment/min/moment.min.js"></script>
+    <script src="assets/libs/lightpick/lightpick.js"></script>
+    <script src="assets/libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script src="assets/libs/inputmask/dist/jquery.inputmask.min.js"></script>
+    <script src="assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
+
+    <!-- clipboard -->
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="assets/js/theme.min.js"></script>
+
+  </body>
+
 
 </html>

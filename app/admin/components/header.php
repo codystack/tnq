@@ -1,61 +1,38 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: login');
+}
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login");
+}
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Nigeria's 1st Online Voting Platform">
-  <meta name="author" content="Vote Online">
-  <title>Vote Online&trade; :: Nigeria's 1st Online Voting Platform</title>
-  <!-- Favicon -->
-  <link rel="icon" href="https://i.imgur.com/kVguEsz.png" type="image/png">
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-  <!-- Icons -->
-  <link rel="stylesheet" href="./assets/vendor/nucleo/css/nucleo.css" type="text/css">
-  <link rel="stylesheet" href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
-  <!-- Vote Online CSS -->
-  <link rel="stylesheet" href="./assets/css/voteonline.css?v=1.2.0" type="text/css">
-  <link rel="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
+    <title>Dashboard :: Nigerian Queen™ </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="assets/libs/tiny-slider/dist/tiny-slider.css">
+    <link rel="stylesheet" href="assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+    <meta property="og:url" content="https://voteonline.com.ng/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nigerian Queen™ :: Beauty for Purpose">
+    <meta property="og:description" content="The Nigerian Queen beauty pageant mission is to find and promote exceptional young ladies with value and virtues that can positively affect her generation, environment and also having strong interest in humanitarian services">
+    <meta name="keywords" content="ThankGodOkoro.codes,ThankGod Okoro,Vote Online,Nigerian Queen,TNQ,beauty pageant,software,voting,election,online contest,contest,award shows,award,shows,pageantry,digital voting,event ticket management,event voting,fashion award,headies awards,amvca,Africa Magic Viewers' Choice Awards,branding">
+    <meta property="og:image" content="https://i.imgur.com/XSGaWUp.png">
+    <meta name="author" content="ThankGod Okoro is a Software developer/programmer, Web + App Developer, UI/UX Designer, Brand Strategist &amp; Product/Graphic Designer.">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://i.imgur.com/TNznbKa.png" />
 </head>
 
-<body class="bg-default">
-  <!-- Navbar -->
-  <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
-    <div class="container">
-      <a class="navbar-brand" href="dashboard.html">
-        <img src="https://i.imgur.com/XSGaWUp.png">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
-        <div class="navbar-collapse-header">
-          <div class="row">
-            <div class="col-6 collapse-brand">
-              <a href="dashboard.html">
-                <img src="./assets/img/brand/blue.png">
-              </a>
-            </div>
-            <div class="col-6 collapse-close">
-              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <hr class="d-lg-none" />
-        <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-          <li class="nav-item d-none d-lg-block ml-lg-4">
-            <a href="\" target="_blank" class="btn btn-neutral btn-icon">
-              <span class="btn-inner--icon">
-                <i class="ni ni-align-left-2 mr-2"></i>
-              </span>
-              <span class="nav-link-inner--text">Go Back to Home</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<body>

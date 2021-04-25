@@ -10,10 +10,9 @@ if (isset($_POST['verifyme_btn'])) {
 
   $error = array();
 
-  $fname       = $conn->real_escape_string($_POST['fname']);
   $email       = $conn->real_escape_string($_POST['email']);
 
-      $query = "SELECT * FROM users WHERE email='$email' AND fname='$fname'";
+      $query = "SELECT * FROM users WHERE email='$email'";
       $results = mysqli_query($conn, $query);
       while($row = mysqli_fetch_array($results)) {
           $fname    = $row['fname'];
@@ -89,10 +88,6 @@ if (isset($_POST['verifyme_btn'])) {
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
               <div class="form-group">
                 <input type="email" name="email" placeholder="Email Address" class="form-control">
-              </div>
-              <div class="form-group">
-                <input type="text" name="fname" placeholder="First Name" class="form-control">
-                </small>
               </div>
               <div class="form-group">
                 <button class="btn-block btn btn-primary" type="submit" name="verifyme_btn">Verify my registration</button>

@@ -14,7 +14,7 @@ if (isset($_POST['register_btn'])) {
     $city           = $conn->real_escape_string($_POST['city']);
     $address        = $conn->real_escape_string($_POST['address']);
     $ighandle       = $conn->real_escape_string($_POST['ighandle']);
-    $regno          = 'TNQ'.rand(1000, 9999);
+    $regno          = 'TNQbb'.rand(1000, 9999);
     $picture_path   = $conn->real_escape_string('upload/'.$_FILES['picture']['name']);
     $proof_path     = $conn->real_escape_string('upload/'.$_FILES['proof']['name']);
 
@@ -234,7 +234,7 @@ if (isset($_POST['register_btn'])) {
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                     </div>
-                    <input class="form-control" placeholder="First Name" pattern="[a-zA-Z]+" required type="text" name="fname">
+                    <input class="form-control" placeholder="First Name" required type="text" name="fname">
                   </div>
                 </div>
                 <div class="form-group">
@@ -242,7 +242,7 @@ if (isset($_POST['register_btn'])) {
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Last Name" pattern="[a-zA-Z]+" required type="text" name="lname">
+                    <input class="form-control" placeholder="Last Name" required type="text" name="lname">
                   </div>
                 </div>
                 <div class="form-group">
@@ -369,7 +369,7 @@ if (isset($_POST['register_btn'])) {
                     <option value="Calabar">Calabar</option>
                     <option value="Enugu">Enugu</option>
                     <option value="Ibadan">Ibadan</option>
-                    <option value="Ilorin">Ilorin</option>
+                    <option value="Ilorin">Ilorin</option>  
                     <option value="Jos">Jos</option>
                     <option value="Kaduna">Kaduna</option>
                     <option value="Lagos">Lagos</option>

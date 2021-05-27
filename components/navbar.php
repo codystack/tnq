@@ -41,7 +41,7 @@
                 </li>
               </ul>
             </div>
-            <a href="https://live.nigerianqueen.org/vote" class="btn btn-primary ml-lg-3">Vote Now</a>
+            <a href="https://nigerianqueen.org/vote" class="btn btn-primary ml-lg-3">Vote Now</a>
           </div>
         </div>
       </nav>

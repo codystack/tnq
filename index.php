@@ -12,7 +12,7 @@ include ('./components/navbar.php');
             <h5>Nigerian Queen 2020</h5>
             <h1 class="display-1">WINNER</h1>
             <p class="lead mb-4">#RoadToTheNigerianQueen</p>
-            <a href="register" class="btn btn-primary btn-lg">Register Now</a>
+            <a href="https://live.nigerianqueen.org/vote" class="btn btn-primary btn-lg">Vote Now</a>
           </div>
         </div>
       </div>

@@ -20,8 +20,8 @@
                 <li class="nav-item <?php if($page=='gallery'){echo 'active';}?>">
                     <a href="gallery" class="nav-link">Gallery</a>
                 </li>
-                <li class="nav-item <?php if($page=='wall-of-fame'){echo 'active';}?>">
-                    <a href="wall-of-fame" class="nav-link">Wall of Fame</a>
+                <li class="nav-item">
+                    <a href="2021-contestants" target="_blank" class="nav-link">Contestants</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://blog.nigerianqueen.org" target="_blank" class="nav-link">Blog</a>

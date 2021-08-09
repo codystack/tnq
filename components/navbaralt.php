@@ -18,7 +18,7 @@
                     <a href="contestants" class="nav-link">Contestants</a>
                 </li>-->
                 <li class="nav-item <?php if($page=='gallery'){echo 'active';}?>">
-                    <a href="gallery" class="nav-link">Gallery</a>
+                    <a href="https://blog.nigerianqueen.org" class="nav-link">Gallery</a>
                 </li>
                 <li class="nav-item">
                     <a href="2021-contestants" target="_blank" class="nav-link">Contestants</a>

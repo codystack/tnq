@@ -5,14 +5,14 @@ include ('./components/navbar.php');
 ?>
 
     <section class="bg-primary-2 text-light p-0 o-hidden">
-      <img src="assets/img/ticketonlinebg2.jpg" alt="Image" class="bg-image">
+      <img src="assets/img/ticketonlinebg3x.jpg" alt="Image" class="bg-image">
       <div class="container layer-2">
         <div class="row py-6 min-vh-80" data-aos="fade-up">
           <div class="col-lg-12 col-xl-12 mt-7">
-            <h5>Nigerian Queen 2020</h5>
-            <h1 class="display-1">WINNER</h1>
+            <h5>Nigerian Queen 2021</h5>
+            <h1 class="display-4">PREMIERING <br>LIVE</h1>
             <p class="lead mb-4">#RoadToTheNigerianQueen</p>
-            <a href="https://nigerianqueen.org/vote" class="btn btn-primary btn-lg">Vote Now</a>
+            <a href="https://live.nigerianqueen.org" class="btn btn-primary btn-lg">Get Your Stream Access</a>
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@ include ('./components/navbar.php');
         <img src="assets/img/dividers/divider-3.svg" alt="graphical divider" data-inject-svg />
       </div>
     </section>
--->
+
     <section>
       <div class="container">
         <div class="row mb-4 justify-content-center text-center">
@@ -145,12 +145,12 @@ include ('./components/navbar.php');
                 </p>
                 <a href="https://ticket.nigerianqueen.org/" target="_blank" class="btn btn-lg mt-2 btn-white">Register Now</a>
               </div>
-              <!--<div class="mx-2 text-center">
+              <div class="mx-2 text-center">
                 <div class="d-flex align-items-center">
                   <span class="h3 mb-0">₦</span>
                   <span class="display-3">25k</span>
                 </div>
-              </div>-->
+              </div>
             </div>
             <div class="decoration bottom right scale-2 d-none d-md-block">
               <img class="bg-primary-2" src="assets/img/decorations/deco-blob-13.svg" alt="deco-blob-13 decoration" data-inject-svg />
@@ -163,6 +163,7 @@ include ('./components/navbar.php');
         </div>
       </div>
     </section>
+    -->
 
     <section class="bg-primary-alt has-divider">
       <div class="divider flip-y">
